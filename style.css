@@ -71,6 +71,23 @@ h1, .aside-left a {
     margin-right: 15px;
 }
 
+
+.search {
+    z-index: 1;
+    position: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 65vh;
+    margin-top: -30px;
+    margin-left: 60px;
+    border-radius: 20px;
+    border-right: 1px solid rgb(162, 162, 162);
+}
+
+.hide{
+    z-index: -1;
+}
+
 .post {
     margin: auto;
     position: relative;
