@@ -24,6 +24,19 @@ aside {
     padding-top: 22px;
 }
 
+.nav-mobile {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+
+.nav-mobile-bottom {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
 .aside-left {
     width: 250px;
     display: flex;
@@ -40,6 +53,12 @@ aside {
 .menu {
     padding-top: 20px;
 }
+
+.logo {
+    height: 0;
+    width: 0;
+}
+
 
 h1, .aside-left a {
     text-decoration: none;
@@ -86,12 +105,13 @@ h1, .aside-left a {
 
 .hide{
     z-index: -1;
+    opacity: 0;
 }
 
 .post {
     margin: auto;
     position: relative;
-    margin: 30px 60vh;
+    margin: 2% 30%;
     width: 470px;
     height: 810px;
     border-bottom: 1px solid rgb(162, 162, 162);
@@ -220,7 +240,6 @@ h1, .aside-left a {
     top: 0;
     right: 0;
     position: fixed;
-    border-left: 1px  solid rgb(162, 162, 162);;
 }
 
 .profil img{
