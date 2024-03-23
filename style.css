@@ -25,16 +25,12 @@ aside {
 }
 
 .nav-mobile {
-    width: 0;
-    height: 0;
-    opacity: 0;
+    display: none;
 }
 
 
 .nav-mobile-bottom {
-    height: 0;
-    width: 0;
-    opacity: 0;
+    display: none;
 }
 
 .aside-left {
@@ -43,7 +39,7 @@ aside {
     top: 0;
     left: 0;
     position: fixed;
-    border-right: 1px  solid rgb(162, 162, 162);
+    border-right: 1px  solid rgb(102, 102, 102);
 }
 
 .aside-profil {
@@ -55,8 +51,16 @@ aside {
 }
 
 .logo {
-    height: 0;
-    width: 0;
+    display: none;
+    -webkit-filter: invert(100%); /* Safari/Chrome */ 
+    filter: invert(100%);
+    z-index: 2;
+    opacity: 100%;
+    height: 40px;
+    width: 40px;
+    margin-left: -5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 
@@ -85,6 +89,10 @@ h1, .aside-left a {
     background-color: rgb(235, 235, 235);
 }
 
+.selected {
+    background-color: rgb(235, 235, 235);
+}
+
 .nav div img {
     height: 30px;
     margin-right: 15px;
@@ -97,15 +105,52 @@ h1, .aside-left a {
     background-color: black;
     height: 100vh;
     width: 65vh;
-    margin-top: -30px;
+    margin-top: -28px;
     margin-left: 60px;
     border-radius: 20px;
-    border-right: 1px solid rgb(162, 162, 162);
+    border-right: 1px solid rgb(102, 102, 102);
+    color: white;
+}
+
+.search-input {
+    padding: 25px;
+    padding-left: 30px;
+    border-bottom: 1px solid rgb(102, 102, 102);
+}
+
+.search h3 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.search input{
+    width: 55vh;
+    height: 40px;
+    background: rgb(46, 46, 46);
+    border: 0;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+.search-recent {
+    margin: 30px;
+}
+
+.search-recent p{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
 }
 
 .hide{
-    z-index: -1;
-    opacity: 0;
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 .post {
@@ -114,7 +159,7 @@ h1, .aside-left a {
     margin: 2% 30%;
     width: 470px;
     height: 810px;
-    border-bottom: 1px solid rgb(162, 162, 162);
+    border-bottom: 1px solid rgb(102, 102, 102);
 }
 
 .post-profile-info{
@@ -137,7 +182,7 @@ h1, .aside-left a {
 }
 
 .post-info-text div span{
-    color: rgb(162, 162, 162);
+    color: rgb(102, 102, 102);
     margin-left: 5px;
 
 }
@@ -163,7 +208,7 @@ h1, .aside-left a {
 
 .post-content {
     margin-top: 10px;
-    border: 1px solid rgb(162, 162, 162);
+    border: 1px solid rgb(102, 102, 102);
     border-radius: 5px;
     height: 587px;
 }

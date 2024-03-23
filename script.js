@@ -205,4 +205,34 @@ function updateLikes(postIndex, change) {
     }
 }
 
+function search() {
+    const search_button = document.querySelector(".search-button");
+    const search = document.querySelector("#search");
+    const title = document.querySelector(".nav-text");
+    const logo = document.querySelector(".logo");
 
+    search_button.addEventListener("click", function(event) {
+        title.classList.add("hide");
+        search.classList.remove("hide");
+        logo.classList.add("show");
+        search_button.classList.add("selected");
+
+        // Impede que o clique no botão de busca propague para o documento
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", function(e) {
+        let click = search.contains(e.target);
+
+        if (!click) {
+            search.classList.add("hide");
+            title.classList.remove("hide");
+            logo.classList.remove("show");
+            search_button.classList.remove("selected");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    search();
+});
