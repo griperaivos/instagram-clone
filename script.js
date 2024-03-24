@@ -48,6 +48,7 @@ load_post();
 suggests_profiles();
 heartSystem();
 markSystem();
+postInside();
 
 function suggests_profiles (){
     for (let i = 0; i < profiles_suggests.length; i++){
@@ -110,7 +111,7 @@ function load_post() {
             <div class="left" id="heart${i}">
                 <img id="deslike" src="img/heart.png" alt="">
             </div>
-            <div class="left">
+            <div class="left comment">
                 <img src="img/comment.png" alt="">
             </div>
             <div class="left">
@@ -236,3 +237,34 @@ function search() {
 document.addEventListener("DOMContentLoaded", function() {
     search();
 });
+
+function postInside(){
+    const comment = document.querySelector(".comment");
+    const post = document.querySelector(".post-inside");
+    const home = document.querySelector("#home");
+    const body = document.querySelector("body");
+
+    comment.addEventListener("click", function(e){
+
+        window.scrollTo(0, 0);
+
+        post.classList.remove("hide");
+        home.classList.add("defocus");
+        body.classList.add("overflow-hidden");
+
+
+        e.stopPropagation();
+    });
+
+    document.addEventListener("click", function(e){
+        let click = post.contains(e.target);
+
+        if(!click){
+            post.classList.add("hide");
+            home.classList.remove("defocus");
+            body.classList.remove("overflow-hidden");
+        }
+    })
+
+
+}
