@@ -4,136 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/post-inside.css">
     <title>Instagram</title>
 </head>
 <body>
+    <div class="post-inside hide">
+        <div class="content-post">
+            <video autoplay controls muted loop>
+                <source src="img/posts/casaldenerd1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-    <div class="nav-mobile">
-        <h1><a href="#">Instagram</a></h1>
-        <div class="right-mobile">
-            <input type="search" name="" id="search-mobile" placeholder="Search">
-            <img src="/img/heart.png" alt="">
+        <div class="post-info">
+            <div class="post-author">            
+                <img src="img/profiles/casaldenerd.jpg" alt="">
+                <p>casaldenerd</p>
+                <img class="more" src="/img/more.png" alt="">
+            </div>
+
+            <div class="post-comments">
+
+            </div>
         </div>
     </div>
 
-    <div class="nav-mobile-bottom">
-        <nav class="nav">
-
-            <div>
-                <img src="/img/home.png" alt="" >
-            </div>
-            <div>
-                <img src="/img/safari.png" alt="">
-            </div>
-            <div>
-                <img src="/img/reels.png" alt="">
-            </div>
-            <div>
-                <img src="/img/send.png" alt="">
-            </div>
-            <div>
+    <div id="home">
+        <div class="nav-mobile">
+            <h1><a href="#">Instagram</a></h1>
+            <div class="right-mobile">
+                <input type="search" name="" id="search-mobile" placeholder="Search">
                 <img src="/img/heart.png" alt="">
             </div>
-            <div>
-                <img src="/img/add.png" alt="">
-            </div>
-            <div>
-                <img class="aside-profil" src="/img/profil.jpg" alt="">
-
-            </div>
-        </nav>
-    </div>
-
-    <aside class="aside-left">
-        <h1 class="nav-text"><a href="#" class="nav-text">Instagram</a></h1>
-        <img class="logo" src="img/instagram.png" alt="">
-
-
-        <nav class="nav">
-
-            <div>
-                <img src="/img/home.png" alt="" >
-                <p class="nav-text">Home</p>
-            </div>
-            <div class="search-button">
-                <img src="/img/search.png" alt="">
-                <p class="nav-text">Search</p>
-            </div>
-            <div>
-                <img src="/img/safari.png" alt="">
-                <p class="nav-text">Explore</p>
-            </div>
-            <div>
-                <img src="/img/reels.png" alt="">
-                <p class="nav-text">Reels</p>
-            </div>
-            <div>
-                <img src="/img/send.png" alt="">
-                <p class="nav-text">Messages</p>
-            </div>
-            <div>
-                <img src="/img/heart.png" alt="">
-                <p class="nav-text">Notifications</p>
-            </div>
-            <div>
-                <img src="/img/add.png" alt="">
-                <p class="nav-text">Create</p>
-            </div>
-            <div>
-                <img class="aside-profil" src="/img/profil.jpg" alt="">
-                <p class="nav-text">Profile</p>
-            </div>
-
-            <div class="menu">
-                <img src="/img/menu.png" alt="">
-                <p class="nav-text">More</p>
-            </div>
-
-        </nav>
-    </aside>
-
-    <div id="search" class="search hide">
-        <div class="search-input">
-            <h3>Search</h3> 
-            <input type="search" placeholder="Search"> 
-        </div>  
-        
-        <div class="search-recent">
-            <h4>Recent</h4>
-            <p>No recent searches.</p>
         </div>
-    </div>
 
-    <section id="post">
-        
+        <div class="nav-mobile-bottom">
+            <nav class="nav">
 
-    </section>
-
-    <aside class="aside-right">
-        <div class="profil-infos">
-
-            <div class="profil">
-                <img src="img/profil.jpg" alt="">
                 <div>
-                    <h3>GripeBrabo</h3>
-                    <p>Gripe</p>
+                    <img src="/img/home.png" alt="" >
                 </div>
-            </div>
+                <div>
+                    <img src="/img/safari.png" alt="">
+                </div>
+                <div>
+                    <img src="/img/reels.png" alt="">
+                </div>
+                <div>
+                    <img src="/img/send.png" alt="">
+                </div>
+                <div>
+                    <img src="/img/heart.png" alt="">
+                </div>
+                <div>
+                    <img src="/img/add.png" alt="">
+                </div>
+                <div>
+                    <img class="aside-profil" src="/img/profil.jpg" alt="">
 
-            <a href="#">Switch</a>
-            <div class="suggests">
-                <div class="seeall">
-                    <p>Suggested for you</p>
-                    <a href="">See All</a>
+                </div>
+            </nav>
+        </div>
+
+        <aside class="aside-left">
+            <h1 class="nav-text"><a href="#" class="nav-text">Instagram</a></h1>
+            <img class="logo" src="img/instagram.png" alt="">
+
+
+            <nav class="nav">
+
+                <div>
+                    <img src="/img/home.png" alt="" >
+                    <p class="nav-text selected-page">Home</p>
+                </div>
+                <div class="search-button">
+                    <img src="/img/search.png" alt="">
+                    <p class="nav-text">Search</p>
+                </div>
+                <div>
+                    <img src="/img/safari.png" alt="">
+                    <p class="nav-text">Explore</p>
+                </div>
+                <div>
+                    <img src="/img/reels.png" alt="">
+                    <p class="nav-text">Reels</p>
+                </div>
+                <div>
+                    <img src="/img/send.png" alt="">
+                    <p class="nav-text">Messages</p>
+                </div>
+                <div>
+                    <img src="/img/heart.png" alt="">
+                    <p class="nav-text">Notifications</p>
+                </div>
+                <div>
+                    <img src="/img/add.png" alt="">
+                    <p class="nav-text">Create</p>
+                </div>
+                <div>
+                    <img class="aside-profil" src="/img/profil.jpg" alt="">
+                    <p class="nav-text">Profile</p>
                 </div>
 
-                <div class="suggests-list"></div>
+                <div class="menu">
+                    <img src="/img/menu.png" alt="">
+                    <p class="nav-text">More</p>
+                </div>
 
+            </nav>
+        </aside>
+
+        <div id="search" class="search hide">
+            <div class="search-input">
+                <h3>Search</h3> 
+                <input type="search" placeholder="Search"> 
+            </div>  
+            
+            <div class="search-recent">
+                <h4>Recent</h4>
+                <p>No recent searches.</p>
             </div>
         </div>
-    </aside>
+
+        <section id="post">
+            
+
+        </section>
+
+        <aside class="aside-right">
+            <div class="profil-infos">
+
+                <div class="profil">
+                    <img src="img/profil.jpg" alt="">
+                    <div>
+                        <h3>GripeBrabo</h3>
+                        <p>Gripe</p>
+                    </div>
+                </div>
+
+                <a href="#">Switch</a>
+                <div class="suggests">
+                    <div class="seeall">
+                        <p>Suggested for you</p>
+                        <a href="">See All</a>
+                    </div>
+
+                    <div class="suggests-list"></div>
+
+                </div>
+            </div>
+        </aside>
+    </div>
 
     <script src="script.js"></script>
 </body>

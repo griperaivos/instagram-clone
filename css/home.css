@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Grand Hotel';
     font-weight: 400;
-    src: url('font/grandhotel-regular-webfont.woff2') format('woff2'),
-    url('font/grandhotel-regular-webfont.woff') format('woff');
+    src: url('/font/grandhotel-regular-webfont.woff2') format('woff2'),
+    url('/font/grandhotel-regular-webfont.woff') format('woff');
 }
 
 * {
@@ -14,6 +14,10 @@
 body {
     font-family: Helvetica, sans-serif;
     background-color: black;
+}
+
+.overflow-hidden{
+    overflow: hidden;
 }
 
 aside {
@@ -93,6 +97,10 @@ h1, .aside-left a {
     background-color: rgb(235, 235, 235);
 }
 
+.selected-page{
+    font-weight: bold;
+}
+
 .nav div img {
     height: 30px;
     margin-right: 15px;
@@ -146,7 +154,7 @@ h1, .aside-left a {
 }
 
 .hide{
-    display: none;
+    display: none !important;
 }
 
 .show{
@@ -343,4 +351,8 @@ h1, .aside-left a {
 
 .profil a {
     margin-top: -30px;
+}
+
+.defocus{
+    opacity: 30%;
 }
