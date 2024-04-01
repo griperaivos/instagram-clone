@@ -147,19 +147,25 @@ function load_post() {
 function heartSystem() {
     for (let i = 0; i < posts.length; i++) {
         const heartContainer = document.querySelector(`#heart${i}`);
+        console.log(heartContainer)
         heartContainer.addEventListener("click", function(event) {
             const target = event.target;
+            console.log(target);
 
             if (target.matches("#deslike")) {
                 target.remove();
                 heartContainer.innerHTML += `<img id="like" src="img/red.heart.png" alt="">`;
                 updateLikes(i, 1); // Aumenta o número de likes em 1
+                console.log("ata")
             } else if (target.matches("#like")) {
                 target.remove();
                 heartContainer.innerHTML += `<img id="deslike" src="img/heart.png" alt="">`;
                 updateLikes(i, -1); // Diminui o número de likes em 1
+                console.log("okay")
             }
         });
+
+        console.log("passou batido");
     }
 }
 

@@ -38,43 +38,43 @@ postInside();
 load_comments();
 load_interactions();
 load_content();
-heartSystem();
 
 function load_comments(){
     let commentsHtml = '';
 
-    let comments = commentsArray[commentParam-1];
+    if(commentParam-1 >= 0){
+        let comments = commentsArray[commentParam-1];
 
-    let author = comments[0];
-    let authorImg = author["img"];
-    let authorName = author["name"]
+        let author = comments[0];
+        let authorImg = author["img"];
+        let authorName = author["name"]
 
-    postAuthor.innerHTML += `                     
-        <img src="${authorImg}" alt="">
-        <p>${authorName}</p>
-        <img class="more" src="/img/more.png" alt="">`;
-    
-    for (let i = 0; i < comments.length; i++){
-        let comment = comments[i];
+        postAuthor.innerHTML += `                     
+            <img src="${authorImg}" alt="">
+            <p>${authorName}</p>
+            <img class="more" src="/img/more.png" alt="">`;
+        
+        for (let i = 0; i < comments.length; i++){
+            let comment = comments[i];
 
-        let img = comment["img"];
-        let username = comment["name"];
-        let text = comment["text"];
-        let date = comment["date"]
+            let img = comment["img"];
+            let username = comment["name"];
+            let text = comment["text"];
+            let date = comment["date"]
 
-        commentsHtml += `
-            <div class="post-comment">
-                <img src="${img}" alt="">
-                <p><span>${username}</span> ${text}</p>
-                <div class="inf">
-                    <p>${date}</p>
-                    <p>See Translation</p>
-                </div>
-            </div>`;
+            commentsHtml += `
+                <div class="post-comment">
+                    <img src="${img}" alt="">
+                    <p><span>${username}</span> ${text}</p>
+                    <div class="inf">
+                        <p>${date}</p>
+                        <p>See Translation</p>
+                    </div>
+                </div>`;
+        }
+
+        commentHtml.innerHTML = commentsHtml;
     }
-
-    commentHtml.innerHTML = commentsHtml;
-
 
 }
 
