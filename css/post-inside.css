@@ -23,7 +23,7 @@
 
 .post-info{
     width: 476px;
-    height: 435px;
+    height: 600px;
     background-color: black;
     margin-left: -20px;
     display: inline;
@@ -56,8 +56,101 @@
 
 .post-author{
     border-bottom: 1px solid rgb(102, 102, 102);
+    margin-bottom: 40px;
 }
 
 .post-comments{
+    margin-top: 20px;
+    display: block;
+    color: white;
+    margin-bottom: 200px;
+}
 
+.post-comment{
+    display: inline;
+    text-align: left;
+    margin: 20px 20px 0 0;
+}
+
+.post-comment span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.post-comment p{
+    font-weight: normal;
+    margin-right: 30px !important;
+    margin: -17px;
+}
+
+.inf{
+    display: grid !important;
+    grid-template-columns: 30px 1000px;
+    
+}
+
+.inf p{
+    color: rgb(102, 102, 102) !important;
+    font-size: 13px;
+    margin-top: 25px;
+    margin-left: 0;
+    margin-bottom: 20px !important;
+}
+
+
+
+.post-info .post-interactions {
+    border-top: 1px solid rgb(102, 102, 102);
+    width: 476px;
+    height: 55px;
+    background-color: black;
+}
+
+.post-info .interactions {
+    margin: 200px !important;
+}
+
+.post-info .post-likes {
+    margin-top: -17px;
+    height: 18px;
+}
+
+.post-info .post-date p{
+    color: rgb(102, 102, 102);
+    margin-top: 0px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.post-info .post-date{
+    border-bottom: 1px solid rgb(102, 102, 102);
+}
+
+.post-info .post-remark{
+    margin: 15px !important;
+    display: inline;
+}
+
+.post-info #textarea{
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 30px;
+    width: 400px;
+    background-color: black;
+    border: none;
+    resize: none;
+    color: white;
+    padding: 5px;
+}
+
+.post-info #textarea:hover {
+    border: none;
+}
+
+.post-info .post-remark p{
+    margin-top: -25px;
+    float: right;
+    color: rgb(0, 110, 255);
+    cursor: pointer;
 }

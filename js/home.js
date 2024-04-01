@@ -3,7 +3,6 @@ const postHtml = document.querySelector("#post");
 const home = document.querySelector("#home");
 const heart = document.querySelector("#heart");
 
-
 let profiles_suggests = [
     {
         name:"meru_alter",
@@ -21,6 +20,7 @@ let profiles_suggests = [
 
 let posts = [
     {
+        id: 1,
         name: "casaldenerd",
         img: "img/profiles/casaldenerd.jpg",
         date: "1w",
@@ -32,6 +32,7 @@ let posts = [
         comments: 8,
     },
     {
+        id: 2,
         name: "receitascuriosas",
         img: "img/profiles/receitascuriosas.jpg",
         date: "1w",
@@ -48,7 +49,6 @@ load_post();
 suggests_profiles();
 heartSystem();
 markSystem();
-postInside();
 
 function suggests_profiles (){
     for (let i = 0; i < profiles_suggests.length; i++){
@@ -81,6 +81,7 @@ function load_post() {
         let likes = post["likes"];
         let title = post["title"];
         let comments = post["comments"];
+        let id = post["id"];
 
         postsHTML += `<div class="post">
         <div class="post-profile">
@@ -112,7 +113,7 @@ function load_post() {
                 <img id="deslike" src="img/heart.png" alt="">
             </div>
             <div class="left comment">
-                <img src="img/comment.png" alt="">
+                <a href="?post=${id}"><img src="img/comment.png" alt=""></a>
             </div>
             <div class="left">
                 <img src="img/send.png" alt="">
@@ -236,35 +237,4 @@ function search() {
 
 document.addEventListener("DOMContentLoaded", function() {
     search();
-});
-
-function postInside(){
-    const comment = document.querySelector(".comment");
-    const post = document.querySelector(".post-inside");
-    const home = document.querySelector("#home");
-    const body = document.querySelector("body");
-
-    comment.addEventListener("click", function(e){
-
-        window.scrollTo(0, 0);
-
-        post.classList.remove("hide");
-        home.classList.add("defocus");
-        body.classList.add("overflow-hidden");
-
-
-        e.stopPropagation();
-    });
-
-    document.addEventListener("click", function(e){
-        let click = post.contains(e.target);
-
-        if(!click){
-            post.classList.add("hide");
-            home.classList.remove("defocus");
-            body.classList.remove("overflow-hidden");
-        }
-    })
-
-
-}
+})
