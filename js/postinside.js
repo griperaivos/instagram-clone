@@ -5,6 +5,7 @@ const commentParam = urlParams.get("post");
 const postLikes = document.querySelector(".post-likes");
 const postDate = document.querySelector(".post-date");
 const postContent = document.querySelector(".content-post");
+const interactions = document.querySelector(".interactions");
 
 let commentsArray = [ [
     {
@@ -90,7 +91,10 @@ function postInside() {
         body.classList.add("overflow-hidden");
 
         document.addEventListener("click", function(e) {
-            if (!post.contains(e.target)) {
+            const target = e.target;
+
+            // Verifica se o clique foi fora do post e do botão de like/deslike
+            if (!post.contains(target) && !target.classList.contains("off")) {
                 window.location.assign("index.html");
             }
         });
@@ -107,8 +111,11 @@ function load_interactions(){
 
         if(id == commentParam)
         {
-            postLikes.innerHTML += `<p>${likes} Likes</p>`;
+            postLikes.innerHTML += `<p class="post-${id}">${likes} Likes</p>`;
             postDate.innerHTML += `<p>${date} ago</p>`;
+            interactions.innerHTML += `            <div class="right bookmark-${id}">
+            <img class="bookmark off" src="img/bookmark.png" alt="">
+        </div>`
         }
     }
 }

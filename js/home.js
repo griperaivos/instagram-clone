@@ -109,8 +109,8 @@ function load_post() {
         </div>
 
         <div class="interactions">
-            <div class="left" id="heart${i}">
-                <img id="deslike" src="img/heart.png" alt="">
+            <div class="left heart${i}">
+                <img class="deslike" src="img/heart.png" alt="">
             </div>
             <div class="left comment">
                 <a href="?post=${id}"><img src="img/comment.png" alt=""></a>
@@ -119,7 +119,7 @@ function load_post() {
                 <img src="img/send.png" alt="">
             </div>
             <div class="right bookmark-${i}">
-                <img id="bookmark" src="img/bookmark.png" alt="">
+                <img class="bookmark" src="img/bookmark.png" alt="">
             </div>
             
         </div>
@@ -142,75 +142,6 @@ function load_post() {
     }
 
     postHtml.innerHTML = postsHTML; // Define o HTML dos posts corretamente
-}
-
-function heartSystem() {
-    for (let i = 0; i < posts.length; i++) {
-        const heartContainer = document.querySelector(`#heart${i}`);
-        console.log(heartContainer)
-        heartContainer.addEventListener("click", function(event) {
-            const target = event.target;
-            console.log(target);
-
-            if (target.matches("#deslike")) {
-                target.remove();
-                heartContainer.innerHTML += `<img id="like" src="img/red.heart.png" alt="">`;
-                updateLikes(i, 1); // Aumenta o número de likes em 1
-                console.log("ata")
-            } else if (target.matches("#like")) {
-                target.remove();
-                heartContainer.innerHTML += `<img id="deslike" src="img/heart.png" alt="">`;
-                updateLikes(i, -1); // Diminui o número de likes em 1
-                console.log("okay")
-            }
-        });
-
-        console.log("passou batido");
-    }
-}
-
-function markSystem(){
-    for (let i = 0; i < posts.length; i++) {
-        const markContainer = document.querySelector(`.bookmark-${i}`);
-        markContainer.addEventListener("click", function(event) {
-            const target = event.target;
-
-            if(target.matches("#bookmark")) {
-                target.remove();
-                markContainer.innerHTML += `<img id="mark" src="img/mark.png" alt="">`;
-            } else if(target.matches("#mark")) {
-                target.remove();
-                markContainer.innerHTML += `<img id="bookmark" src="img/bookmark.png" alt="">`;
-            }
-        })
-    }
-}
-
-function updateLikes(postIndex, change) {
-    // Seleciona o elemento de likes correspondente ao postIndex
-    const likesElement = document.querySelector(`.post-${postIndex}`);
-
-    if(likesElement ){
-        if(likesElement.textContent.length > 10){
-            if(change == 1){
-                change = 0.001;
-            }
-            else if (change == -1){
-                change = -0.001;
-            }
-        }
-    }
-
-    // Atualiza o número de likes no array 'posts'
-    posts[postIndex].likes += change;
-
-    // Verifica se o elemento de likes foi encontrado corretamente
-    if (likesElement) {
-        likesElement.textContent = posts[postIndex].likes + " likes"; // Atualiza o texto exibido com o novo número de likes
-    } else {
-        console.error("Elemento de likes não encontrado para o post " + postIndex);
-        console.log(`.post-${postIndex} .likes`);
-    }
 }
 
 function search() {
