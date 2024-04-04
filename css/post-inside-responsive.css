@@ -1,0 +1,44 @@
+@media (max-width: 1250px){
+    .post-inside {
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .post-inside {
+        margin-top: 15px;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-post video{
+        height: 500px;
+        max-width: 508px; 
+        min-width: 380px; 
+        margin-left: 50%;
+    }
+
+    .post-info{
+        display: none;
+    }
+
+    .post-interactions {
+        width: 376px;
+        display: block !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .content-post video{
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 550px) {
+    .content-post video{
+        margin-left: 10%;
+    }
+}
